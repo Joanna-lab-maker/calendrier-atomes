@@ -218,7 +218,7 @@ else:
     st.sidebar.caption("Aucun résultat à exporter pour l’instant.")
 
 # ---------------------- Titre ----------------------
-st.title("Calendrier de l’Avent — Les Atomes (Seconde)")
+
 st.caption("Écris ta réponse puis clique « Vérifier ». Feedback immédiat ✅/❌, score enregistré (1 point par bonne réponse).")
 
 # ---------------------- Affichage des jours ----------------------
