@@ -6,7 +6,8 @@ from datetime import date, datetime
 import streamlit as st
 
 st.title("Calendrier de l’Avent — Les Atomes (Seconde – J.A.)")
-st.image("sandbox:/mnt/data/152535d3-1cf0-4003-8494-b16bc8d2dfd4.png", width=180)
+st.image("https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/Capture%20d'%C3%A9cran%202025-11-23%20231049.png", width=180)
+
 
 
 # ---------------------- Données pédagogiques (24 jours) ----------------------
