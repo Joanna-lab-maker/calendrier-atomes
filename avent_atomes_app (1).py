@@ -13,7 +13,6 @@ DAYS = [
     {"theme":"Qu’est-ce qu’un atome ?",
      "recap":"Un atome est constitué d’un noyau (protons + neutrons) et d’électrons dans un nuage électronique.",
      "question":"Mon cortège électronique a une charge égale à −6,4 × 10⁻¹⁹ C alors que ma charge totale est nulle. Mon noyau contient un neutron de plus que de protons. Qui suis-je ?",
-,
     "solution":"Il s’agit de l’atome de deutérium (¹H²).",
 "accept":[r"deut[ée]rium", r"hydrog[èe]ne", r"H2"]
 
