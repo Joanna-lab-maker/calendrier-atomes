@@ -181,7 +181,7 @@ def evaluate(day:int, text:str) -> int:
     return 1 if (len(patt) >= 2 and hits >= 2) or (len(patt) == 1 and hits >= 1) else 0
 
 # ---------------------- Barre latérale ----------------------
-st.sidebar.title("⚛️ Calendrier – Atomes (Seconde)")
+
 student_id = st.sidebar.text_input("Identifiant élève (ex: Prénom_Nom ou code)", value="", placeholder="Ex: Lea_Dupont ou 2nde3-05")
 lock = st.sidebar.toggle("Verrouiller par date (1–24 décembre)", value=False)
 today = date.today()
