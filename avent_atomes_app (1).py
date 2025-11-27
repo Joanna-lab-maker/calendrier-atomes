@@ -25,11 +25,11 @@ DAYS = [
      "solution":"Parce qu'on connaît la structure interne (noyau + électrons).",
      "accept":[r"noyau", r"électrons?|electrons?"]},
 
-    {"theme":"Modèle de Dalton",
-     "recap":"Dalton (début XIXe) propose des « billes » indivisibles et des combinaisons définies.",
-     "question":"Cite une limite du modèle de Dalton.",
-     "solution":"N’explique ni noyau, ni électrons, ni isotopes, ni l’électricité.",
-     "accept":[r"noyau|électrons?|electrons?|isotopes?"]},
+     "theme": "Le numéro atomique Z",
+ "recap": "Le numéro atomique (Z) correspond au nombre de protons dans le noyau d’un atome. Il détermine l’élément chimique.",
+ "question": "Un atome possède 8 protons. Quel est son numéro atomique et de quel élément s’agit-il ?",
+ "solution": "Z = 8, il s’agit de l’atome d’oxygène.",
+ "accept": [r"8", r"oxyg[èe]ne"],
 
     {"theme":"Modèle de Thomson",
      "recap":"« Pudding aux raisins » : électrons plongés dans une masse positive.",
