@@ -269,6 +269,28 @@ for i in range(24):
                     else:
                         with st.expander("Voir un élément de solution", expanded=False):
                             st.write(DAYS[i]["solution"])
+                           # Si la question est un QCM
+if "qcm" in DAYS[i]:
+    choix = st.radio("Choisis la bonne réponse :", list(DAYS[i]["qcm"].values()))
+    if st.button("Vérifier", key=f"btn{i}"):
+        bonne_rep = DAYS[i]["qcm"][DAYS[i]["answer"]]
+        if choix == bonne_rep:
+            st.success("✅ Bonne réponse !")
+        else:
+            st.error(f"❌ Mauvaise réponse. La bonne réponse était : {bonne_rep}")
+    st.write("---")
+
+# Sinon, c’est une question ouverte
+else:
+    reponse = st.text_input("Ta réponse :")
+    if st.button("Vérifier", key=f"btn_open{i}"):
+        import re
+        ok = any(re.search(pat, reponse, re.IGNORECASE) for pat in DAYS[i]["accept"])
+        if ok:
+            st.success("✅ Bonne réponse !")
+        else:
+            st.error(f"❌ Mauvaise réponse. {DAYS[i]['solution']}")
+
 
 # ---------------------- Footer ----------------------
 st.divider()
