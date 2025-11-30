@@ -151,11 +151,20 @@ DAYS = [
      "solution":"Fusion stellaire et supernovæ.",
      "accept":[r"fusion|supernov|nucl[ée]osynth[èe]se"]},
 
-    {"theme":"Radioactivité (intro)",
-     "recap":"Transformation spontanée de noyaux instables (α, β, γ).",
-     "question":"Cite un usage médical d’un radioisotope.",
-     "solution":"Imagerie/Traitement (iode-131, technétium-99m).",
-     "accept":[r"iode.?131|techn[ée]tium.?99m|imagerie|traitement|scintigraphie"]},
+   {
+ "theme": "Conversion des unités — Rayon atomique",
+ "recap": "Le picomètre (pm) est une unité utilisée pour exprimer la taille des atomes. 1 pm = 10⁻¹² m.",
+ "question": "Un atome de titane (Ti) a un rayon de 140 pm. Ce rayon est équivalent à :",
+ "qcm": {
+     "a": "1,40 × 10⁻¹⁰ m",
+     "b": "14,0 × 10⁻¹⁰ m",
+     "c": "140 × 10⁻¹⁰ m"
+ },
+ "answer": "a",
+ "solution": "1 pm = 10⁻¹² m, donc 140 pm = 140 × 10⁻¹² m = 1,40 × 10⁻¹⁰ m.",
+ "accept": [r"1.?40.?10.?-10"]
+},
+
 ]
 
 # ---------------------- État & utilitaires ----------------------
