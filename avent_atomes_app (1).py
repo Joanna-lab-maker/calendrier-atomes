@@ -151,6 +151,19 @@ DAYS = [
     "solution": "X (1s² 2s² 2p¹) et Y (1s² 2s² 2p⁵) ont leurs électrons dans les couches n=1 et n=2, donc appartiennent à la 2ᵉ période. Z (3p²) a trois couches, donc 3ᵉ période.",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour14.png"
 },
+  {
+    "theme": "Molécule d’ammoniac — Liaisons covalentes",
+    "recap": "Dans la molécule d’ammoniac (NH₃), l’atome d’azote forme des liaisons covalentes simples avec les atomes d’hydrogène.",
+    "question": "Combien de liaisons covalentes contient la molécule d’ammoniac (NH₃) ?",
+    "qcm": {
+        "a": "2",
+        "b": "3",
+        "c": "4"
+    },
+    "answer": "b",
+    "solution": "L’ammoniac (NH₃) comporte trois liaisons covalentes simples entre l’atome d’azote et les trois atomes d’hydrogène.",
+    "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour15.png"
+},
 ]
 
 # --- INITIALISATION DES SCORES ---
