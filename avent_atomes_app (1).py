@@ -138,6 +138,19 @@ DAYS = [
     "solution": "Le calcium (Z=20) remplit la sous-couche 4s après la 3p : sa configuration est 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour13.png"
 },
+  {
+    "theme": "Périodes du tableau périodique — Configurations électroniques",
+    "recap": "Les éléments d’une même période possèdent le même nombre de couches électroniques (même niveau n principal).",
+    "question": "Quelles configurations électroniques appartiennent à la même période ?",
+    "qcm": {
+        "a": "a (1s²), e (1s² 2s¹), f (1s² 2s² 2p²)",
+        "b": "c (1s² 2s² 2p⁶ 3s² 3p⁵), d (1s² 2s² 2p⁶ 3s² 3p²), j (1s² 2s² 2p⁶ 3s² 3p¹)",
+        "c": "b (1s² 2s² 2p¹), i (1s² 2s² 2p⁵)"
+    },
+    "answer": "b",
+    "solution": "Les configurations c, d et j se terminent toutes par 3p, donc ces atomes ont trois couches électroniques (n = 3) : ils appartiennent à la 3ᵉ période.",
+    "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour14.png"
+},
 ]
 
 # --- INITIALISATION DES SCORES ---
