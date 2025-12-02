@@ -5,6 +5,18 @@ import streamlit as st
 
 st.set_page_config(page_title="Calendrier de l’Avent — QCM Atomes (Seconde – J.A.)",
                    page_icon="⚛️", layout="wide")
+# Masquer le menu, l’icône GitHub et la déco du header
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}                 /* menu "⋮" */
+footer {visibility: hidden;}                   /* pied de page */
+[data-testid="stToolbar"]{display:none!important;}      /* barre du haut */
+header [data-testid="stDecoration"]{display:none!important;} /* ruban coloré */
+header a[href*="github.com"]{display:none!important;}   /* icône/lien GitHub */
+header button[kind="header"]{display:none!important;}   /* autres boutons header */
+</style>
+""", unsafe_allow_html=True)
+
 
 DAYS = [
     {
