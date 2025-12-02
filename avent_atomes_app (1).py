@@ -164,6 +164,19 @@ DAYS = [
     "solution": "L’ammoniac (NH₃) comporte trois liaisons covalentes simples entre l’atome d’azote et les trois atomes d’hydrogène.",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour15.png"
 },
+  {
+    "theme": "Molécule de chlorure d’hydrogène — Doublets non liants",
+    "recap": "Dans HCl, le chlore (Z = 17) a 7 électrons de valence et forme une liaison covalente simple avec l’hydrogène.",
+    "question": "Combien de doublets non liants possède la molécule de chlorure d’hydrogène (HCl) ?",
+    "qcm": {
+        "a": "3",
+        "b": "2",
+        "c": "1"
+    },
+    "answer": "a",
+    "solution": "Le chlore forme une liaison simple avec l’hydrogène (1 doublet liant) et conserve 3 doublets non liants.",
+    "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour16.png"
+},
 ]
 
 # --- INITIALISATION DES SCORES ---
