@@ -234,14 +234,10 @@ for i, day in enumerate(DAYS):
             st.markdown(f"**À ouvrir le :** {d} déc.")
             st.markdown(f"> *Rappel express* : {day['recap']}")
             st.markdown(f"**Question :** {day['question']}")
-            opts = list(day["qcm"].items())
-            for key, val in opts:
-           if "images_qcm" in day and key in day["images_qcm"]:
-        st.image(day["images_qcm"][key], caption=f"{key}. {val}", use_container_width=True)
+           opts = list(day["qcm"].items())
 labels = [f"{k}. {v}" for k, v in opts]
 choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
-
-            if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
+  if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
                 good_key = day["answer"]
                 good_label = f"{good_key}. {day['qcm'][good_key]}"
                 correct = 1 if (choice == good_label) else 0
