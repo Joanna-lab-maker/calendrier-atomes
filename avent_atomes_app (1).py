@@ -190,6 +190,23 @@ DAYS = [
     "solution": "Le néon (Z = 10) a 10 électrons. Les ions Na⁺ (11−1), Mg²⁺ (12−2), F⁻ (9+1) et O²⁻ (8+2) ont aussi 10 électrons, donc la même structure électronique que Ne.",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour17.png"
 },
+  {
+    "theme": "Molécule de dioxyde de carbone — Formule de Lewis",
+    "recap": "Le dioxyde de carbone (CO₂) contient deux liaisons doubles entre le carbone et les deux atomes d’oxygène.",
+    "question": "Quelle formule de Lewis correspond à la molécule de CO₂ ?",
+    "qcm": {
+        "a": "Option A",
+        "b": "Option B",
+        "c": "Option C"
+    },
+    "answer": "b",
+    "solution": "Dans la molécule de CO₂, le carbone réalise deux doubles liaisons (C=O). Chaque atome d’oxygène possède deux doublets non liants.",
+    "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour19.png",
+    "images_qcm": {
+        "a": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour19_A.png",
+        "b": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour19_B.png",
+        "c": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour19_C.png"
+    },
 ]
 
 # --- INITIALISATION DES SCORES ---
