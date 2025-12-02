@@ -126,10 +126,9 @@ DAYS = [
   # "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour12.png"
 },
 
-
 ] + [
     {
-        "theme": f"Jour {d} — À compléter",
+        "theme": "À compléter",   # <-- on enlève "Jour {d} —"
         "recap": "Ajoute ta question + image (optionnel).",
         "question": "Question QCM…",
         "qcm": {"a": "Réponse A", "b": "Réponse B", "c": "Réponse C"},
@@ -137,79 +136,3 @@ DAYS = [
         "solution": "Explication de la bonne réponse."
     } for d in range(11, 25)
 ]
-
-if "scores" not in st.session_state:
-    st.session_state.scores = {i+1: None for i in range(len(DAYS))}
-if "log" not in st.session_state:
-    st.session_state.log = []
-
-def french_date_for(day:int):
-    return f"{day} déc."
-
-st.sidebar.title("⚛️ Calendrier QCM — Atomes (Seconde – J.A.)")
-student_id = st.sidebar.text_input("Identifiant élève", value="", placeholder="Prénom_Nom ou code")
-lock = st.sidebar.toggle("Verrouiller par date (1–24 décembre)", value=False)
-today = date.today()
-st.sidebar.markdown(f"Aujourd’hui : {today.day} {today.strftime('%b')}")
-
-vals = [v for v in st.session_state.scores.values() if v is not None]
-total = sum(vals) if vals else 0
-st.sidebar.metric("Score", f"{total}/{len(DAYS)}")
-st.sidebar.progress(total/len(DAYS) if len(DAYS) else 0.0, text="Progression")
-
-if st.sidebar.button("Réinitialiser", use_container_width=True):
-    st.session_state.scores = {i+1: None for i in range(len(DAYS))}
-    st.session_state.log = []
-    st.rerun()
-
-if st.session_state.log:
-    out = io.StringIO()
-    w = csv.DictWriter(out, fieldnames=["timestamp","student_id","day","choice_key","correct"])
-    w.writeheader()
-    for r in st.session_state.log: w.writerow(r)
-    st.sidebar.download_button("⬇️ Exporter journal CSV", out.getvalue().encode("utf-8"),
-                               file_name="avent_qcm_resultats.csv", mime="text/csv",
-                               use_container_width=True)
-
-st.title("Calendrier de l’Avent — Les Atomes (Seconde – J.A.)")
-st.caption("Version QCM (jours 1 à 24). Ajoutez vos images via la clé 'image' de chaque jour.")
-
-cols = st.columns(4, gap="small")
-for i in range(len(DAYS)):
-    d = i + 1
-    with cols[i % 4]:
-        locked = lock and not (today.month == 12 and d <= min(24, today.day))
-        state = st.session_state.scores[d]
-        badge = "🔒" if locked else ("✅" if state == 1 else ("❌" if state == 0 else "🗓️"))
-        with st.expander(f"{badge} Jour {d} — {DAYS[i]['theme']}", expanded=False):
-            st.markdown(f"**À ouvrir le :** {french_date_for(d)}")
-            st.markdown(f"> *Rappel express* : {DAYS[i]['recap']}")
-            st.markdown(f"**Question :** {DAYS[i]['question']}")
-            if "image" in DAYS[i]:
-                st.image(DAYS[i]["image"], use_container_width=True)
-            if locked:
-                st.info("Case verrouillée (mode calendrier).")
-            else:
-                opts = list(DAYS[i]["qcm"].items())
-                labels = [f"{k}. {v}" for k, v in opts]
-                choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
-                if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
-                    good_key = DAYS[i]["answer"]
-                    good_label = f"{good_key}. {DAYS[i]['qcm'][good_key]}"
-                    correct = 1 if (choice == good_label) else 0
-                    if st.session_state.scores[d] is None:
-                        st.session_state.scores[d] = correct
-                    ts = datetime.now().isoformat(timespec="seconds")
-                    st.session_state.log.append({
-                        "timestamp": ts,
-                        "student_id": student_id or "anonyme",
-                        "day": d,
-                        "choice_key": choice.split(".", 1)[0],
-                        "correct": correct
-                    })
-                    if correct:
-                        st.success("✅ Bonne réponse !")
-                    else:
-                        st.error(f"❌ Mauvaise réponse. La bonne était : {good_label}")
-                    with st.expander("Voir la solution", expanded=False):
-                        st.write(DAYS[i]["solution"])
