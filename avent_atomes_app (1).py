@@ -126,9 +126,10 @@ DAYS = [
   # "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour12.png"
 },
 
-] + [
+# --- Suite des jours (11 à 24) : gabarits à compléter ---
+DAYS += [
     {
-        "theme": "À compléter",   # <-- on enlève "Jour {d} —"
+        "theme": "À compléter",  # NE mets pas "Jour ..." ici
         "recap": "Ajoute ta question + image (optionnel).",
         "question": "Question QCM…",
         "qcm": {"a": "Réponse A", "b": "Réponse B", "c": "Réponse C"},
@@ -136,3 +137,4 @@ DAYS = [
         "solution": "Explication de la bonne réponse."
     } for d in range(11, 25)
 ]
+
