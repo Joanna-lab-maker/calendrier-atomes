@@ -125,8 +125,7 @@ DAYS = [
         "answer": "b",
         "solution": "Cl a Z = 17 ⇒ 17 protons. En devenant Cl⁻, il gagne 1 électron ⇒ 18 e⁻ (anion)."
     }
-]
-{
+  {
     "theme": "Configuration électronique — Calcium",
     "recap": "Le calcium (Ca) est dans la 2ᵉ colonne → famille des alcalino-terreux, et dans la 4ᵉ période du tableau périodique.",
     "question": "L’atome de calcium appartient à la 2ᵉ colonne et à la 4ᵉ période de la classification. Quelle est sa configuration électronique ?",
@@ -139,6 +138,8 @@ DAYS = [
     "solution": "Le calcium (Z=20) remplit la sous-couche 4s après la 3p : sa configuration est 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour13.png"
 },
+
+]
 
 # --- INITIALISATION DES SCORES ---
 def _reset_state_to_days():
