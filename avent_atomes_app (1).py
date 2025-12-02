@@ -222,7 +222,6 @@ if st.sidebar.button("🔄 Réinitialiser", use_container_width=True):
 
 # --- PAGE PRINCIPALE ---
 st.title("Calendrier de l’Avent — Les Atomes (Seconde – J.A.)")
-
 cols = st.columns(4, gap="small")
 for i, day in enumerate(DAYS):
     d = i + 1
@@ -234,14 +233,37 @@ for i, day in enumerate(DAYS):
             st.markdown(f"**À ouvrir le :** {d} déc.")
             st.markdown(f"> *Rappel express* : {day['recap']}")
             st.markdown(f"**Question :** {day['question']}")
-opts = list(day["qcm"].items())
-labels = [f"{k}. {v}" for k, v in opts]
-choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
-                if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
+
+            # --- Bloc QCM ---
+            opts = list(day["qcm"].items())
+            labels = [f"{k}. {v}" for k, v in opts]
+            choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
+
+            if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
                 good_key = day["answer"]
                 good_label = f"{good_key}. {day['qcm'][good_key]}"
                 correct = 1 if (choice == good_label) else 0
+
                 if st.session_state.scores[d] is None:
+                    st.session_state.scores[d] = correct
+
+                ts = datetime.now().isoformat(timespec="seconds")
+                st.session_state.log.append({
+                    "timestamp": ts,
+                    "student_id": student_id or "anonyme",
+                    "day": d,
+                    "choice_key": choice.split(".", 1)[0],
+                    "correct": correct
+                })
+
+                if correct:
+                    st.success("✅ Bonne réponse !")
+                else:
+                    st.error(f"❌ Mauvaise réponse. La bonne était : {good_label}")
+
+                with st.expander("Voir la solution", expanded=False):
+                    st.write(day["solution"])
+
                     st.session_state.scores[d] = correct
                 ts = datetime.now().isoformat(timespec="seconds")
                 st.session_state.log.append({
