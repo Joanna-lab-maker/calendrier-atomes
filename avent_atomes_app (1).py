@@ -209,7 +209,6 @@ if st.sidebar.button("🔄 Réinitialiser", use_container_width=True):
 
 # --- PAGE PRINCIPALE ---
 st.title("Calendrier de l’Avent — Les Atomes (Seconde – J.A.)")
-st.caption("Version QCM (jours 1 à 12).")
 
 cols = st.columns(4, gap="small")
 for i, day in enumerate(DAYS):
