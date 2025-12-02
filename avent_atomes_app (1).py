@@ -190,4 +190,6 @@ for i, day in enumerate(DAYS):
                 if correct:
                     st.success("✅ Bonne réponse !")
                 else:
-                    st.error(f"❌ Mauvaise
+                    st.error(f"❌ Mauvaise réponse. La bonne était : {good_label}")
+                with st.expander("Voir la solution", expanded=False):
+                    st.write(day["solution"])
