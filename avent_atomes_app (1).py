@@ -140,15 +140,15 @@ DAYS = [
 },
   {
     "theme": "Périodes du tableau périodique — Configurations électroniques",
-    "recap": "Les éléments d’une même période possèdent le même nombre de couches électroniques (même niveau n principal).",
-    "question": "Quelles configurations électroniques appartiennent à la même période ?",
+    "recap": "Les éléments d’une même période ont le même nombre de couches électroniques (même nombre quantique principal n).",
+    "question": "Les atomes X, Y et Z ont respectivement les configurations suivantes :\n\nX : 1s² 2s² 2p¹\nY : 1s² 2s² 2p⁵\nZ : 1s² 2s² 2p⁶ 3s² 3p²\n\nLesquels appartiennent à la même période ?",
     "qcm": {
-        "a": "a (1s²), e (1s² 2s¹), f (1s² 2s² 2p²)",
-        "b": "c (1s² 2s² 2p⁶ 3s² 3p⁵), d (1s² 2s² 2p⁶ 3s² 3p²), j (1s² 2s² 2p⁶ 3s² 3p¹)",
-        "c": "b (1s² 2s² 2p¹), i (1s² 2s² 2p⁵)"
+        "a": "X et Y",
+        "b": "Y et Z",
+        "c": "X et Z"
     },
-    "answer": "b",
-    "solution": "Les configurations c, d et j se terminent toutes par 3p, donc ces atomes ont trois couches électroniques (n = 3) : ils appartiennent à la 3ᵉ période.",
+    "answer": "a",
+    "solution": "X (1s² 2s² 2p¹) et Y (1s² 2s² 2p⁵) ont leurs électrons dans les couches n=1 et n=2, donc appartiennent à la 2ᵉ période. Z (3p²) a trois couches, donc 3ᵉ période.",
     "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour14.png"
 },
 ]
