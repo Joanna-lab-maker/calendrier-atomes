@@ -87,6 +87,20 @@ DAYS = [
         "answer": "b",
         "solution": "Même motif externe mais niveau n=3 : 1s² 2s² 2p⁶ 3s² 3p³."
     },
+  {
+  "theme": "Famille chimique — Configuration électronique",
+  "recap": "Deux éléments appartiennent à la même famille chimique s’ils ont le même nombre d’électrons sur leur couche externe.",
+  "question": "Deux atomes ont pour configuration électronique 1s² 2s² 2p² et 1s² 2s² 2p⁴. Appartiennent-ils à la même famille chimique ?",
+  "qcm": {
+      "a": "Oui, car ils ont le même nombre d’électrons de valence.",
+      "b": "Non, car ils n’ont pas le même nombre d’électrons de valence.",
+      "c": "Oui, car ils sont dans la même période."
+  },
+  "answer": "b",
+  "solution": "Le premier atome a 4 électrons de valence, le second en a 6. Ils n’appartiennent donc pas à la même famille chimique.",
+  "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour11.png"
+},
+
 ] + [
     {
         "theme": f"Jour {d} — À compléter",
