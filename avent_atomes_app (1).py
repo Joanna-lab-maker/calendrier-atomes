@@ -100,6 +100,20 @@ DAYS = [
   "solution": "Le premier atome a 4 électrons de valence, le second en a 6. Ils n’appartiennent donc pas à la même famille chimique.",
   "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour11.png"
 },
+  {
+  "theme": "Ions de NaCl — L’ion chlorure Cl⁻",
+  "recap": "Un ion négatif (anion) résulte du gain d’électron(s). Pour le chlore : Z = 17 (→ 17 protons). Cl⁻ possède donc 18 électrons.",
+  "question": "À propos de l’ion chlorure Cl⁻, quelle proposition est correcte ?",
+  "qcm": {
+      "a": "Il a perdu 1 électron ; c’est un cation ; 17 p⁺ et 16 e⁻.",
+      "b": "Il a gagné 1 électron ; c’est un anion ; 17 p⁺ et 18 e⁻.",
+      "c": "Il a gagné 1 électron ; c’est un cation ; 18 p⁺ et 17 e⁻."
+  },
+  "answer": "b",
+  "solution": "Cl a Z = 17 ⇒ 17 protons. En devenant Cl⁻, il gagne 1 e⁻ ⇒ 18 électrons. Un ion de charge négative est un anion.",
+  # "image": "https://raw.githubusercontent.com/Joanna-lab-maker/calendrier-atomes/main/images/jour12.png"
+},
+
 
 ] + [
     {
