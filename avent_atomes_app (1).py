@@ -1,11 +1,9 @@
-
 import io, csv
 from datetime import date, datetime
 import streamlit as st
 
 st.set_page_config(page_title="Calendrier de l’Avent — QCM Atomes (Seconde – J.A.)",
                    page_icon="⚛️", layout="wide")
-
 DAYS = [
     {
         "theme": "Devinette — Quel atome ?",
