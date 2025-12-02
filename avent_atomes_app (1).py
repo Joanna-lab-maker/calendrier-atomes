@@ -237,7 +237,6 @@ for i, day in enumerate(DAYS):
 opts = list(day["qcm"].items())
 labels = [f"{k}. {v}" for k, v in opts]
 choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
-
   if st.button("Vérifier", key=f"btn_{d}", use_container_width=True):
                 good_key = day["answer"]
                 good_label = f"{good_key}. {day['qcm'][good_key]}"
