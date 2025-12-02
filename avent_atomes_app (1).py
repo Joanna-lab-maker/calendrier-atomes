@@ -235,8 +235,8 @@ for i, day in enumerate(DAYS):
             st.markdown(f"> *Rappel express* : {day['recap']}")
             st.markdown(f"**Question :** {day['question']}")
             opts = list(day["qcm"].items())
-for key, val in opts:
-    if "images_qcm" in day and key in day["images_qcm"]:
+            for key, val in opts:
+           if "images_qcm" in day and key in day["images_qcm"]:
         st.image(day["images_qcm"][key], caption=f"{key}. {val}", use_container_width=True)
 labels = [f"{k}. {v}" for k, v in opts]
 choice = st.radio("Choisis la bonne réponse :", labels, key=f"qcm_{d}")
